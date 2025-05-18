@@ -79,3 +79,12 @@ def get_movies_by_genre():
     except Exception as e:
         logging.error(f"Error fetching movies by genre: {e}")
         return jsonify({"error": str(e)}), 500
+    
+@movies_bp.route('/movie/<int:movie_id>', methods=['GET'])
+def get_movie(movie_id):
+    try:
+        movie = Movie.query.get_or_404(movie_id)
+        return jsonify(movie.to_dict()), 200
+    except Exception as e:
+        logging.error(f"Error fetching movie with ID {movie_id}: {e}")
+        return jsonify({"error": str(e)}), 500
