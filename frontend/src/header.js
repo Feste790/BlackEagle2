@@ -13,8 +13,8 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                     </a>
                 </div>
                 <nav className="nav-links">
-                    <Link to="/filmy">Filmy</Link>
-                    <Link to="/seriale">Seriale</Link>
+                    <Link to="/movies">Filmy</Link>
+                    <Link to="/series">Seriale</Link>
                     <Link to="/watched">Obejrzane</Link>
                 </nav>
             </div>
@@ -27,9 +27,13 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <Funnel className="icon-funnel" />
-                <Settings className="icon-settings" />
-                <CircleUserRound className="icon-CircleUserRound" />
+                <div className="Header_icons">
+                    <Funnel className="icon-funnel" />
+                    <Settings className="icon-settings" />
+                    <Link to="/login" title="Zaloguj się" className='Header_icons'>
+                        <CircleUserRound className="icon-CircleUserRound" />
+                    </Link>
+                </div>
             </div>
         </header>
     );

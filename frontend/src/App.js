@@ -8,6 +8,9 @@ import Footer from './footer';
 import Home from './home';
 import Register from './register';
 import Login from './login';
+import Movies from './movies';
+import Series from './series';
+import MovieDetails from './moviedetails';
 import './App.css';
 
 function AppWrapper() {
@@ -39,8 +42,11 @@ function AppWrapper() {
             <Routes>
                 <Route path="/" element={<Home filteredMovies={filteredMovies} />} />
                 <Route path="/watched" element={<Watched filteredMovies={filteredMovies} />} />
+                <Route path="/movies" element={<Movies filteredMovies={filteredMovies} />} />
+                <Route path="/series" element={<Series filteredMovies={filteredMovies} />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/movie/:id" element={<MovieDetails />} />
             </Routes>
 
             {!hideHeaderFooter && <Footer />}

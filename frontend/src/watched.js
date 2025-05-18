@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 const Watched = ({ filteredMovies }) => {
@@ -49,27 +50,21 @@ const Watched = ({ filteredMovies }) => {
             <div className="movie-list-watched">
                 {filteredMovies.map((movie, i) => (
                     <div className="movie-item-watched" key={i}>
-                        <div className="movie-poster-container">
+                        <Link to={`/movie/${movie.movie_id}`} className="movie-poster-container">
                             <img
                                 className="movie-poster-watched"
                                 src={movie.poster || 'https://via.placeholder.com/150x220'}
                                 alt={movie.title}
                             />
-                        </div>
                         <div className="movie-details-watched">
                             <h2>{movie.title}</h2>
                             <p><strong>Data premiery:</strong> {formatPolishDate(movie.released)}</p>
-                            <p><strong>Rok produkcji:</strong> {movie.prod_year}</p>
-                            <p><strong>Oznaczenie wiekowe:</strong> {movie.rated}</p>
                             <p><strong>Długość trwania:</strong> {movie.runtime} min</p>
                             <p><strong>Kraj pochodzenia:</strong> {movie.country}</p>
-                            <p><strong>Box Office:</strong> {movie.box_office}</p>
                             <p><strong>IMDb:</strong> {movie.imdb_rating} / 10 ({movie.imdb_votes?.toLocaleString() || 0} głosów)</p>
-                            <p><strong>Metacritic:</strong> {movie.metacritic ? `${movie.metacritic}/100` : 'Brak danych'}</p>
-                            <p><strong>Rotten Tomatoes:</strong> {movie.rotten_tomatoes ? `${movie.rotten_tomatoes}%` : 'Brak danych'}</p>
-                            <p><strong>Nagrody:</strong> {movie.awards || 'Brak danych'}</p>
                             <p className="movie-description-watched">{movie.plot}</p>
                         </div>
+                        </Link>
                     </div>
                 ))}
             </div>

@@ -74,6 +74,11 @@ function Register() {
     return (
         <div className="register-page">
             <div className="center">
+                <div class="login_logo">
+                    <a href="/">
+                        <img src="blackeaglelogo.png" alt="logo" className="logo-image" />
+                    </a>
+                </div>
                 <h1 className="formTitle">Rejestracja</h1>
                 {message && <p className="success-message">{message}</p>}
                 {error && <p className="error-message">{error}</p>}
@@ -135,7 +140,7 @@ function Register() {
                     <input
                         type="submit"
                         className="submitButtonLogin"
-                        value="Zarejestuj"
+                        value="Zarejestruj"
                     />
                 </form>
             </div>

@@ -4,6 +4,7 @@ import { EffectCoverflow, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
+import { Link } from 'react-router-dom';
 import './App.css'; 
 
 function Home({ filteredMovies }) {
@@ -39,13 +40,15 @@ function Home({ filteredMovies }) {
                         {filteredMovies.map((movie) => (
                             <SwiperSlide key={`slide-${movie.movie_id}`}>
                                 <div className="carousel-item">
-                                    <img
-                                        src={movie.poster || 'https://placehold.co/200x300'}
-                                        alt={movie.title}
-                                        className="carousel-poster"
-                                    />
-                                    <h3 className="carousel-title">{movie.title}</h3>
-                                    <p className="carousel-meta">{movie.prod_year}</p>
+                                    <Link to={`/movie/${movie.movie_id}`} className="carousel-item">
+                                        <img
+                                            src={movie.poster || 'https://placehold.co/200x300'}
+                                            alt={movie.title}
+                                            className="carousel-poster"
+                                        />
+                                        <h3 className="carousel-title">{movie.title}</h3>
+                                        <p className="carousel-meta">{movie.prod_year}</p>
+                                    </Link>
                                 </div>
                             </SwiperSlide>
                         ))}
@@ -62,15 +65,13 @@ function Home({ filteredMovies }) {
                             >
                                 {filteredMovies.map((movie) => (
                                     <SwiperSlide key={movie.movie_id}>
-                                        <div className="movie-card">
+                                        <Link to={`/movie/${movie.movie_id}`} className="movie-card">
                                             <img
                                                 src={movie.poster || 'https://placehold.co/200x300'}
                                                 alt={movie.title}
                                                 className="movie-poster"
                                             />
-                                            {/* <h3 className="movieTitle">{movie.title}</h3>
-                                            <p>{movie.prod_year}</p> */}
-                                        </div>
+                                        </Link>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
@@ -87,15 +88,13 @@ function Home({ filteredMovies }) {
                             >
                                 {filteredMovies.map((movie) => (
                                     <SwiperSlide key={movie.movie_id}>
-                                        <div className="movie-card">
+                                        <Link to={`/movie/${movie.movie_id}`} className="movie-card">
                                             <img
                                                 src={movie.poster || 'https://placehold.co/200x300'}
                                                 alt={movie.title}
                                                 className="movie-poster"
                                             />
-                                            {/* <h3 className="movieTitle">{movie.title}</h3>
-                                            <p>{movie.prod_year}</p> */}
-                                        </div>
+                                        </Link>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
@@ -112,15 +111,13 @@ function Home({ filteredMovies }) {
                             >
                                 {filteredMovies.map((movie) => (
                                     <SwiperSlide key={movie.movie_id}>
-                                        <div className="movie-card">
+                                        <Link to={`/movie/${movie.movie_id}`} className="movie-card">
                                             <img
                                                 src={movie.poster || 'https://placehold.co/200x300'}
                                                 alt={movie.title}
                                                 className="movie-poster"
                                             />
-                                            {/* <h3 className="movieTitle">{movie.title}</h3>
-                                            <p>{movie.prod_year}</p> */}
-                                        </div>
+                                        </Link>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
@@ -137,15 +134,13 @@ function Home({ filteredMovies }) {
                             >
                                 {filteredMovies.map((movie) => (
                                     <SwiperSlide key={movie.movie_id}>
-                                        <div className="movie-card">
+                                        <Link to={`/movie/${movie.movie_id}`} className="movie-card">
                                             <img
                                                 src={movie.poster || 'https://placehold.co/200x300'}
                                                 alt={movie.title}
                                                 className="movie-poster"
                                             />
-                                            {/* <h3 className="movieTitle">{movie.title}</h3>
-                                            <p>{movie.prod_year}</p> */}
-                                        </div>
+                                        </Link>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
@@ -162,15 +157,13 @@ function Home({ filteredMovies }) {
                                 >
                                     {filteredMovies.map((movie) => (
                                         <SwiperSlide key={movie.movie_id}>
-                                            <div className="movie-card">
+                                            <Link to={`/movie/${movie.movie_id}`} className="movie-card">
                                                 <img
                                                     src={movie.poster || 'https://placehold.co/200x300'}
                                                     alt={movie.title}
                                                     className="movie-poster"
                                                 />
-                                                {/* <h3 className="movieTitle">{movie.title}</h3>
-                                                <p>{movie.prod_year}</p> */}
-                                            </div>
+                                            </Link>
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>

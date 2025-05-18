@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode'; 
 import './App.css';
 
 function Login() {
@@ -39,6 +40,10 @@ function Login() {
 
             if (response.ok) {
                 localStorage.setItem('token', data.token);
+                const decoded = jwtDecode(data.token);
+                const username = decoded.username;
+                localStorage.setItem('username', username);
+
                 setMessage('Logowanie zakończone sukcesem!');
                 setTimeout(() => {
                     navigate('/home');
@@ -51,9 +56,15 @@ function Login() {
         }
     };
 
+
     return (
         <div className="login-page">
             <div className="center">
+                <div class="login_logo">
+                    <a href="/">
+                        <img src="blackeaglelogo.png" alt="logo" className="logo-image" />
+                    </a>
+                </div>
                 <h1 className="formTitle">Logowanie</h1>
                 {message && <p className="success-message">{message}</p>}
                 {error && <p className="error-message">{error}</p>}
@@ -83,7 +94,7 @@ function Login() {
                     />
                 </form>
                 <p className="linkreg">
-                    Załóż konto: <Link to="/register">Rejestracja</Link>
+                    <span className="text_register_acc">Nie masz jeszcze konta? </span><Link to="/register" className="registerlink"><span className="text_register_acc_butt">Zarejestruj się</span></Link>
                 </p>
             </div>
         </div>

@@ -110,6 +110,13 @@ body {
     padding-right: 10px;
 }
 
+.Header_icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 10px;
+}
+
 .header-left {
     display: flex;
     align-items: center;
@@ -363,10 +370,11 @@ body {
     gap: 2rem;
     background-color: #1f1f1f;
     border-radius: 10px;
-    width: 100%;
     box-shadow: 0 0 12px rgba(255, 215, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding-left: 30px;
+    padding-top: 25px;
+    cursor: pointer;
 }
 
 .movie-item-watched:hover {
@@ -379,6 +387,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .movie-poster-watched {
@@ -400,6 +409,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 10px;
+    text-decoration: none;
 }
 
 .movie-details-watched h2 {
@@ -442,7 +453,7 @@ body {
 
 .login, .password, .email, .imie, .nazwisko  {
     margin: 20px;
-    width: 400px;
+    width: 394px;
     height: 50px;
     border: hidden;
     font-weight: 500;
@@ -450,6 +461,7 @@ body {
     background-color: #1a1a1a;
     color: #f5c518;
     border-radius: 4px;
+    padding-left: 16px; 
 }
 
 .login::placeholder {
@@ -556,25 +568,27 @@ body {
     height: 50px;
     justify-self: center;
     color: #f5c518;
+    font-size: 50px;
 }
 
 .submitButtonLogin {
-    width: 200px;
-    height: 50px;
+    width: 90%;
+    height: 40px;
     margin-top: 20px;
     background-color: transparent;
-    border: hidden;
+    border: 1px solid #f5c518;
     color: #f5c518;
     font-weight: 500;
-    font-size: larger;
+    font-size: 16px;
     border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .submitButtonLogin:hover {
-    background-color: transparent;
-    color: rgb(255, 217, 0);
-    transform: translateY(-1px);
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+    color: #f5c518;
+    box-shadow: 0 0 10px rgba(255, 217, 0, 0.5);
+    transform: scale(1.03);
 }
 
 .linkreg {
@@ -582,4 +596,184 @@ body {
         margin-top: 20px;
         font-size: smaller;
     
+}
+
+.login_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.logo-image {
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.text_register_acc{
+    text-decoration: underline;
+}
+
+.text_register_acc_butt{
+    font-weight: bold;
+}
+
+.text_register_acc_butt:hover{
+    color: rgb(247, 233, 158);
+    font-weight: bold;
+}
+
+.registerlink:visited{
+    color: #ffd700;
+    text-decoration: none;
+}
+
+/* Series */
+
+.series-page {
+    padding: 2rem;
+    background-color: #141414;
+    min-height: 100vh;
+}
+
+.series-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.series-card {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.series-card:hover {
+    transform: translateY(-5px);
+}
+
+.series-poster-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.series-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.series-info {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.series-name {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* MOVIES  */
+.movies-page {
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.movies-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.movies-card {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+}
+
+.movies-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    color: #f5c518;
+    box-shadow: 0 0 10px rgba(255, 217, 0, 0.5);
+    transform: scale(1.03);
+}
+
+.movies-poster-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.movies-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.movies-info {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.movies-name {
+    font-size: 1rem;
+    color: #f5c518;
+    margin: 0;
+}
+
+.movies-name:visited {
+    font-size: 1rem;
+    color: #f5c518;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* MOVIE DETAIL 1. */
+.movie-details {
+    display: flex;
+    padding: 2rem;
+}
+
+.movie-details-poster {
+    width: 350px;
+    margin-right: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.TitleDetails {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.movie-details-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
