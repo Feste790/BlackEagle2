@@ -39,7 +39,6 @@ function Login() {
 
             if (response.ok) {
                 localStorage.setItem('token', data.token);
-                localStorage.setItem('username', username);
 
                 setMessage('Logowanie zakończone sukcesem!');
                 setTimeout(() => {
