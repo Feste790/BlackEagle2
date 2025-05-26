@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { jwtDecode } from 'jwt-decode'; 
 import './App.css';
 
 function Login() {
@@ -40,8 +39,6 @@ function Login() {
 
             if (response.ok) {
                 localStorage.setItem('token', data.token);
-                const decoded = jwtDecode(data.token);
-                const username = decoded.username;
                 localStorage.setItem('username', username);
 
                 setMessage('Logowanie zakończone sukcesem!');
