@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
-    DATABASE_URI = environ.get('DATABASE_URL')
+    DATABASE_URL = environ.get('DATABASE_URL')
     #SQLALCHEMY_TRACK_MODIFICATIONS = False
     OMDB_API_KEY = environ.get('OMDB_API_KEY', '5da8ff81')
     JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY', 'your-secret-key-very-long-and-random')
