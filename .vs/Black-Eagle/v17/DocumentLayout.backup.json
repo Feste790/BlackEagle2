@@ -1,0 +1,685 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\import_movies.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\import_movies.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user_movie.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\user_movie.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\Home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\Login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\user.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\genre.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\genre.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\auth.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\api\\auth.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\database.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\database.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\csv.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\api\\csv.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\omdb_service.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\services\\omdb_service.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\config.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\config.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\language.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\language.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_people.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\movie_people.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\csv_service.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\services\\csv_service.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\people.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\people.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\auth_service.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\services\\auth_service.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\movies.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\api\\movies.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_genre.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\movie_genre.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\movie.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user_movie_model.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\user_movie_model.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_genre_model.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\movie_genre_model.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_people_model.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\movie_people_model.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\services\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\models\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\app.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\omdb.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backend\\api\\omdb.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Register.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\Register.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Header.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\Header.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Movies.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\Movies.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\ReportWebVitals.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\ReportWebVitals.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Series.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\Series.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\SetupTests.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\SetupTests.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Footer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\Footer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\App.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\App.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Watched.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\Watched.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\MovieDetails.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\MovieDetails.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 226,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "omdb.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\omdb.py",
+              "RelativeDocumentMoniker": "backend\\api\\omdb.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\omdb.py",
+              "RelativeToolTip": "backend\\api\\omdb.py",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwEgAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T21:59:32.072Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "app.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\app.py",
+              "RelativeDocumentMoniker": "backend\\app.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\app.py",
+              "RelativeToolTip": "backend\\app.py",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwCsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T12:46:35.367Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "user.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user.py",
+              "RelativeDocumentMoniker": "backend\\models\\user.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user.py",
+              "RelativeToolTip": "backend\\models\\user.py",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T13:22:24.613Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{75504045-d02f-44e5-bf60-5f60df380e8b}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "import_movies.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\import_movies.py",
+              "RelativeDocumentMoniker": "backend\\import_movies.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\import_movies.py",
+              "RelativeToolTip": "backend\\import_movies.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-06-01T22:53:23.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "__init__.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\__init__.py",
+              "RelativeDocumentMoniker": "backend\\models\\__init__.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\__init__.py",
+              "RelativeToolTip": "backend\\models\\__init__.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-06-01T16:26:13.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "__init__.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\__init__.py",
+              "RelativeDocumentMoniker": "backend\\services\\__init__.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\__init__.py",
+              "RelativeToolTip": "backend\\services\\__init__.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-06-01T15:50:24.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "movie_people_model.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_people_model.py",
+              "RelativeDocumentMoniker": "backend\\models\\movie_people_model.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_people_model.py",
+              "RelativeToolTip": "backend\\models\\movie_people_model.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-06-01T15:49:16.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "movie_genre_model.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_genre_model.py",
+              "RelativeDocumentMoniker": "backend\\models\\movie_genre_model.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_genre_model.py",
+              "RelativeToolTip": "backend\\models\\movie_genre_model.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-06-01T15:48:49.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "user_movie_model.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user_movie_model.py",
+              "RelativeDocumentMoniker": "backend\\models\\user_movie_model.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user_movie_model.py",
+              "RelativeToolTip": "backend\\models\\user_movie_model.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-06-01T15:47:55.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "movie.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie.py",
+              "RelativeDocumentMoniker": "backend\\models\\movie.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie.py",
+              "RelativeToolTip": "backend\\models\\movie.py",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-06-01T14:45:38.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "movie_genre.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_genre.py",
+              "RelativeDocumentMoniker": "backend\\models\\movie_genre.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_genre.py",
+              "RelativeToolTip": "backend\\models\\movie_genre.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:23:54.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "genre.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\genre.py",
+              "RelativeDocumentMoniker": "backend\\models\\genre.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\genre.py",
+              "RelativeToolTip": "backend\\models\\genre.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:23:38.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "movies.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\movies.py",
+              "RelativeDocumentMoniker": "backend\\api\\movies.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\movies.py",
+              "RelativeToolTip": "backend\\api\\movies.py",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwDQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T13:21:57.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "auth_service.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\auth_service.py",
+              "RelativeDocumentMoniker": "backend\\services\\auth_service.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\auth_service.py",
+              "RelativeToolTip": "backend\\services\\auth_service.py",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwCMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:07:17.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "user_movie.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user_movie.py",
+              "RelativeDocumentMoniker": "backend\\models\\user_movie.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\user_movie.py",
+              "RelativeToolTip": "backend\\models\\user_movie.py",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:25:12.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "auth.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\auth.py",
+              "RelativeDocumentMoniker": "backend\\api\\auth.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\auth.py",
+              "RelativeToolTip": "backend\\api\\auth.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T21:59:33.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "people.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\people.py",
+              "RelativeDocumentMoniker": "backend\\models\\people.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\people.py",
+              "RelativeToolTip": "backend\\models\\people.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:06:50.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "csv_service.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\csv_service.py",
+              "RelativeDocumentMoniker": "backend\\services\\csv_service.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\csv_service.py",
+              "RelativeToolTip": "backend\\services\\csv_service.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:07:22.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "movie_people.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_people.py",
+              "RelativeDocumentMoniker": "backend\\models\\movie_people.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\movie_people.py",
+              "RelativeToolTip": "backend\\models\\movie_people.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:24:29.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "language.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\language.py",
+              "RelativeDocumentMoniker": "backend\\models\\language.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\models\\language.py",
+              "RelativeToolTip": "backend\\models\\language.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:06:36.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "database.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\database.py",
+              "RelativeDocumentMoniker": "backend\\database.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\database.py",
+              "RelativeToolTip": "backend\\database.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:07:48.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "config.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\config.py",
+              "RelativeDocumentMoniker": "backend\\config.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\config.py",
+              "RelativeToolTip": "backend\\config.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:07:43.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "omdb_service.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\omdb_service.py",
+              "RelativeDocumentMoniker": "backend\\services\\omdb_service.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\services\\omdb_service.py",
+              "RelativeToolTip": "backend\\services\\omdb_service.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:07:28.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "csv.py",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\csv.py",
+              "RelativeDocumentMoniker": "backend\\api\\csv.py",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\backend\\api\\csv.py",
+              "RelativeToolTip": "backend\\api\\csv.py",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-27T22:06:10.937Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 210,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\package.json",
+              "RelativeDocumentMoniker": "frontend\\package.json",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\package.json",
+              "RelativeToolTip": "frontend\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-01T16:01:34.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Watched.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Watched.js",
+              "RelativeDocumentMoniker": "frontend\\src\\Watched.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Watched.js",
+              "RelativeToolTip": "frontend\\src\\Watched.js",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAgwF8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-01T15:56:57.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SetupTests.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\SetupTests.js",
+              "RelativeDocumentMoniker": "frontend\\src\\SetupTests.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\SetupTests.js",
+              "RelativeToolTip": "frontend\\src\\SetupTests.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-01T15:56:57.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Series.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Series.js",
+              "RelativeDocumentMoniker": "frontend\\src\\Series.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Series.js",
+              "RelativeToolTip": "frontend\\src\\Series.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:27:13.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ReportWebVitals.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\ReportWebVitals.js",
+              "RelativeDocumentMoniker": "frontend\\src\\ReportWebVitals.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\ReportWebVitals.js",
+              "RelativeToolTip": "frontend\\src\\ReportWebVitals.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:27:13.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Register.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Register.js",
+              "RelativeDocumentMoniker": "frontend\\src\\Register.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Register.js",
+              "RelativeToolTip": "frontend\\src\\Register.js",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAwwIwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:27:10.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Movies.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Movies.js",
+              "RelativeDocumentMoniker": "frontend\\src\\Movies.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Movies.js",
+              "RelativeToolTip": "frontend\\src\\Movies.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:27:09.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MovieDetails.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\MovieDetails.js",
+              "RelativeDocumentMoniker": "frontend\\src\\MovieDetails.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\MovieDetails.js",
+              "RelativeToolTip": "frontend\\src\\MovieDetails.js",
+              "ViewState": "AgIAAE8AAAAAAAAAAADwv2sAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:27:09.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Login.js",
+              "RelativeDocumentMoniker": "frontend\\src\\Login.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Login.js",
+              "RelativeToolTip": "frontend\\src\\Login.js",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswCwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:27:08.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\index.js",
+              "RelativeDocumentMoniker": "frontend\\src\\index.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\index.js",
+              "RelativeToolTip": "frontend\\src\\index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:27:07.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Home.js",
+              "RelativeDocumentMoniker": "frontend\\src\\Home.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Home.js",
+              "RelativeToolTip": "frontend\\src\\Home.js",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAowIEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:27:05.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "App.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\App.js",
+              "RelativeDocumentMoniker": "frontend\\src\\App.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\App.js",
+              "RelativeToolTip": "frontend\\src\\App.js",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAswHUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:26:23.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Footer.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Footer.js",
+              "RelativeDocumentMoniker": "frontend\\src\\Footer.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Footer.js",
+              "RelativeToolTip": "frontend\\src\\Footer.js",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwDAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:26:42.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "App.test.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\App.test.js",
+              "RelativeDocumentMoniker": "frontend\\src\\App.test.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\App.test.js",
+              "RelativeToolTip": "frontend\\src\\App.test.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:26:41.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Header.js",
+              "DocumentMoniker": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Header.js",
+              "RelativeDocumentMoniker": "frontend\\src\\Header.js",
+              "ToolTip": "C:\\Users\\karol\\source\\repos\\Feste790\\BlackEagle-New\\Black-Eagle\\frontend\\src\\Header.js",
+              "RelativeToolTip": "frontend\\src\\Header.js",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswB4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T01:26:58.361Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 771,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 659,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

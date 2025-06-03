@@ -1,23 +1,19 @@
+# auth.py
 from flask import Blueprint, request, jsonify
-from services.auth_service import register_user, login_user
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from models.user import AppUser  # Poprawny import
+from database import db
 import logging
 
 auth_bp = Blueprint('auth', __name__)
 
 # Configure logging
-logging.basicConfig(
-    filename='import.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+logging.basicConfig(filename='backend/app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 @auth_bp.route('/register', methods=['POST'])
 def register():
     try:
-        raw_data = request.get_data(as_text=True)
-        logging.info(f"Raw request data: {raw_data}")
         data = request.get_json()
-        logging.info(f"Parsed JSON: {data}")
         first_name = data.get('first_name')
         last_name = data.get('last_name')
         email = data.get('email')
@@ -25,35 +21,39 @@ def register():
         password = data.get('password')
 
         if not all([email, username, password]):
-            logging.warning('Registration failed: missing required fields')
-            return jsonify({'error': 'Missing required fields (email, username, password)'}), 400
+            return jsonify({'error': 'Missing required fields'}), 400
 
-        user = register_user(first_name, last_name, email, username, password)
-        if user:
-            return jsonify({'message': 'User registered successfully', 'user': user.to_dict()}), 201
-        return jsonify({'error': 'Username or email already exists'}), 400
+        if AppUser.query.filter_by(email=email).first() or AppUser.query.filter_by(username=username).first():
+            return jsonify({'error': 'Email or username already exists'}), 400
+
+        new_user = AppUser(first_name=first_name, last_name=last_name, email=email, username=username, password=password)
+        new_user.set_password(password)  # Haszowanie has³a
+        db.session.add(new_user)
+        db.session.commit()
+        logging.info(f"User registered: {email}")
+        return jsonify({'message': 'User registered successfully', 'user_id': new_user.appuser_id}), 201
     except Exception as e:
-        logging.error(f"Error in register: {str(e)}")
-        return jsonify({'error': f"Internal server error: {str(e)}"}), 500
+        db.session.rollback()
+        logging.error(f"Registration error: {str(e)}")
+        return jsonify({'error': str(e)}), 500
 
 @auth_bp.route('/login', methods=['POST'])
 def login():
     try:
-        raw_data = request.get_data(as_text=True)
-        logging.info(f"Raw request data: {raw_data}")
         data = request.get_json()
-        logging.info(f"Parsed JSON: {data}")
         email = data.get('email')
         password = data.get('password')
 
-        if not all([email, password]):
-            logging.warning('Login failed: missing required fields')
-            return jsonify({'error': 'Missing required fields'}), 400
+        if not email or not password:
+            return jsonify({'error': 'Missing email or password'}), 400
 
-        token = login_user(email, password)
-        if token:
-            return jsonify({'token': token}), 200
-        return jsonify({'error': 'Invalid email or password'}), 401
+        user = AppUser.query.filter_by(email=email).first()
+        if not user or not user.check_password(password):
+            return jsonify({'error': 'Invalid credentials'}), 401
+
+        access_token = create_access_token(identity=user.appuser_id)
+        logging.info(f"User logged in: {email}")
+        return jsonify({'message': 'Login successful', 'access_token': access_token}), 200
     except Exception as e:
-        logging.error(f"Error in login: {str(e)}")
-        return jsonify({'error': f"Internal server error: {str(e)}"}), 500
+        logging.error(f"Login error: {str(e)}")
+        return jsonify({'error': str(e)}), 500

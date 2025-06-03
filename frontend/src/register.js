@@ -1,148 +1,138 @@
-
 import React, { useState } from 'react';
-import './App.css';
+import { useNavigate } from 'react-router-dom';
 
-function Register() {
-    // Stan dla pól formularza i komunikatów
+function Register({ setIsAuthenticated, apiUrl }) {
     const [formData, setFormData] = useState({
         first_name: '',
         last_name: '',
-        email: '',
+        email: '', // Zmieniono z e_mail na email
         username: '',
-        password: '',
-        confirmPassword: ''
+        password: ''
     });
-    const [message, setMessage] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-    // Obsługa zmian w polach formularza
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Obsługa wysyłania formularza
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setMessage('');
-        setError('');
-
-        // Walidacja haseł
-        if (formData.password !== formData.confirmPassword) {
-            setError('Hasła nie są zgodne');
-            return;
-        }
-
-        // Przygotowanie danych dla backendu
-        const payload = {
-            first_name: formData.first_name,
-            last_name: formData.last_name,
-            email: formData.email,
-            username: formData.username,
-            password: formData.password
-        };
-
+        console.log('Wysyłane dane:', formData); // Debugowanie
         try {
-            const response = await fetch('https://backend-g7rx.onrender.com/register', {
+            const response = await fetch(`${apiUrl}/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(formData)
             });
 
-            const data = await response.json();
-
-            if (response.ok) {
-                setMessage(data.message || 'Rejestracja zakończona sukcesem!');
-                setFormData({
-                    first_name: '',
-                    last_name: '',
-                    email: '',
-                    username: '',
-                    password: '',
-                    confirmPassword: ''
-                });
-            } else {
-                setError(data.error || 'Błąd rejestracji');
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.error || 'Błąd rejestracji');
             }
+
+            const loginResponse = await fetch(`${apiUrl}/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: formData.email, // Zmieniono z e_mail na email
+                    password: formData.password
+                })
+            });
+
+            if (!loginResponse.ok) {
+                const loginData = await loginResponse.json();
+                throw new Error(loginData.error || 'Nie udało się zalogować');
+            }
+
+            const loginData = await loginResponse.json();
+            localStorage.setItem('access_token', loginData.access_token);
+            setIsAuthenticated(true);
+            navigate('/movies');
         } catch (err) {
-            setError('Błąd połączenia z serwerem');
+            setError(err.message || 'Wystąpił błąd podczas rejestracji');
+            console.error('Błąd:', err);
         }
     };
 
     return (
         <div className="register-page">
             <div className="center">
-                <div class="login_logo">
-                    <a href="/">
-                        <img src="blackeaglelogo.png" alt="logo" className="logo-image" />
-                    </a>
+                <div className="login_logo">
+                    <img src="/blackeaglelogo.png" alt="Logo" className="logo-image" />
                 </div>
-                <h1 className="formTitle">Rejestracja</h1>
-                {message && <p className="success-message">{message}</p>}
-                {error && <p className="error-message">{error}</p>}
+                <h2 className="formTitle">Rejestracja</h2>
+                {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
                 <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="first_name"
-                        className="imie"
-                        placeholder="Imię"
-                        value={formData.first_name}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="last_name"
-                        className="nazwisko"
-                        placeholder="Nazwisko"
-                        value={formData.last_name}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="username"
-                        className="login"
-                        placeholder="Login"
-                        value={formData.username}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        className="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="password"
-                        name="password"
-                        className="password"
-                        placeholder="Hasło"
-                        value={formData.password}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="password"
-                        name="confirmPassword"
-                        className="password"
-                        placeholder="Powtórz Hasło"
-                        value={formData.confirmPassword}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="submit"
-                        className="submitButtonLogin"
-                        value="Zarejestruj"
-                    />
+                    <div>
+                        <input
+                            type="text"
+                            name="first_name"
+                            className="imie"
+                            placeholder="Imię"
+                            value={formData.first_name}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            name="last_name"
+                            className="nazwisko"
+                            placeholder="Nazwisko"
+                            value={formData.last_name}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="email"
+                            name="email" // Zmieniono z e_mail na email
+                            className="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            name="username"
+                            className="login"
+                            placeholder="Nazwa użytkownika"
+                            value={formData.username}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="password"
+                            name="password"
+                            className="password"
+                            placeholder="Hasło"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="submitButtonLogin">
+                        Zarejestruj
+                    </button>
                 </form>
+                <p className="linkreg">
+                    Masz już konto?{' '}
+                    <a href="/login" className="text_register_acc">
+                        <span className="text_register_acc_butt">Zaloguj się</span>
+                    </a>
+                </p>
             </div>
         </div>
     );

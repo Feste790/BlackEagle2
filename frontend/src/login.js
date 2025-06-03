@@ -1,96 +1,83 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './App.css';
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login({ setIsAuthenticated, apiUrl = 'http://localhost:5000' }) {
     const [formData, setFormData] = useState({
-        email: '',
+        email: '', // Zmieniono z e_mail na email
         password: ''
     });
-    const [message, setMessage] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setMessage('');
-        setError('');
-
-        const payload = {
-            email: formData.email,
-            password: formData.password
-        };
-
+        console.log('Wysyłane dane:', formData);
         try {
-            const response = await fetch('https://backend-g7rx.onrender.com/login', {
+            const response = await fetch(`${apiUrl}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(formData)
             });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                localStorage.setItem('token', data.token);
-
-                setMessage('Logowanie zakończone sukcesem!');
-                setTimeout(() => {
-                    navigate('/home');
-                }, 1000);
-            } else {
-                setError(data.error || 'Błąd logowania');
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.error || `Błąd serwera: ${response.status}`);
             }
+            const data = await response.json();
+            localStorage.setItem('access_token', data.access_token);
+            setIsAuthenticated(true);
+            navigate('/movies');
         } catch (err) {
-            setError('Błąd połączenia z serwerem');
+            setError(err.message || 'Wystąpił błąd podczas logowania');
+            console.error('Błąd:', err);
         }
     };
-
 
     return (
         <div className="login-page">
             <div className="center">
-                <div class="login_logo">
-                    <a href="/">
-                        <img src="blackeaglelogo.png" alt="logo" className="logo-image" />
-                    </a>
+                <div className="login_logo">
+                    <img src="/logo.png" alt="Logo" className="logo-image" />
                 </div>
-                <h1 className="formTitle">Logowanie</h1>
-                {message && <p className="success-message">{message}</p>}
-                {error && <p className="error-message">{error}</p>}
+                <h2 className="formTitle">Logowanie</h2>
+                {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
                 <form onSubmit={handleSubmit}>
-                    <input
-                        type="email"
-                        name="email"
-                        className="login"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="password"
-                        name="password"
-                        className="password"
-                        placeholder="Hasło"
-                        value={formData.password}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="submit"
-                        className="submitButtonLogin"
-                        value="Zaloguj"
-                    />
+                    <div>
+                        <input
+                            type="email"
+                            name="email" // Zmieniono z e_mail na email
+                            className="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="password"
+                            name="password"
+                            className="password"
+                            placeholder="Hasło"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="submitButtonLogin">
+                        Zaloguj
+                    </button>
                 </form>
                 <p className="linkreg">
-                    <span className="text_register_acc">Nie masz jeszcze konta? </span><Link to="/register" className="registerlink"><span className="text_register_acc_butt">Zarejestruj się</span></Link>
+                    Nie masz konta?{' '}
+                    <a href="/register" className="text_register_acc">
+                        <span className="text_register_acc_butt">Zarejestruj się</span>
+                    </a>
                 </p>
             </div>
         </div>

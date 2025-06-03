@@ -1,16 +1,32 @@
-# -*- coding: utf-8 -*-
+# user.py
 from database import db
+from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import date
 
 class AppUser(db.Model):
     __tablename__ = 'appuser'
+
     appuser_id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(255))
-    last_name = db.Column(db.String(255))
-    email = db.Column(db.String(255), unique=True, nullable=False)
-    username = db.Column(db.String(255), unique=True, nullable=False)
-    password = db.Column(db.String(255), nullable=False)
-    created_at = db.Column(db.Date, default=date.today)
+    first_name = db.Column(db.String(255), nullable=True)
+    last_name = db.Column(db.String(255), nullable=True)
+    email = db.Column(db.String(120), nullable=False, unique=True)
+    username = db.Column(db.String(50), nullable=False, unique=True)
+    password = db.Column(db.String(128), nullable=False)  # Powrót do password zamiast passwordhash
+    created_at = db.Column(db.Date, nullable=True, default=date.today)
+
+    def __init__(self, first_name, last_name, email, username, password):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        self.username = username
+        self.set_password(password)  # Haszowanie w metodzie set_password
+
+
+    def set_password(self, password):
+        self.password = generate_password_hash(password)  # U¿ywamy password zamiast passwordhash
+
+    def check_password(self, password):
+        return check_password_hash(self.password, password)
 
     def to_dict(self):
         return {
@@ -21,12 +37,3 @@ class AppUser(db.Model):
             'username': self.username,
             'created_at': self.created_at.isoformat() if self.created_at else None
         }
-
-class AppUser_Movie(db.Model):
-    __tablename__ = 'appuser_movie'
-    user_movie_id = db.Column("user_movie_id", db.Integer, primary_key=True)
-    appuser_id = db.Column("appuser_id", db.Integer, db.ForeignKey('appuser.appuser_id'), nullable=False)
-    movie_id = db.Column("movie_id", db.Integer, db.ForeignKey('movie.movie_id'), nullable=False)
-    user_rating = db.Column("user_rating", db.Float)
-    watched_date = db.Column("watched_date", db.Date)
-

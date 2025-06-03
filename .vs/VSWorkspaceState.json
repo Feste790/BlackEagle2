@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\api",
+    "\\backend\\models",
+    "\\backend\\services"
+  ],
+  "SelectedNode": "\\backend\\import_movies.py",
+  "PreviewInSolutionExplorer": false
+}

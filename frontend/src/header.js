@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Settings, CircleUserRound, Funnel } from 'lucide-react';
+import { Settings, CircleUserRound, Filter } from 'lucide-react';
 import './App.css';
 
 const Header = ({ searchQuery, setSearchQuery }) => {
@@ -28,7 +28,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <div className="Header_icons">
-                    <Funnel className="icon-funnel" />
+                    <Filter className="icon-funnel" />
                     <Settings className="icon-settings" />
                     <Link to="/login" title="Zaloguj się" className='Header_icons'>
                         <CircleUserRound className="icon-CircleUserRound" />

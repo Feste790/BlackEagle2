@@ -1,31 +1,21 @@
-# -*- coding: utf-8 -*-
 import requests
-import logging
-from urllib.parse import quote
 from config import Config
+import logging
 
-logging.basicConfig(
-    filename='import.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    encoding='utf-8'
-)
+# Configure logging
+logging.basicConfig(filename='backend/app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def get_movie_from_omdb(title):
-    url = f'http://www.omdbapi.com/?t={quote(title)}&apikey={Config.OMDB_API_KEY}'
     try:
+        url = f"http://www.omdbapi.com/?t={title}&apikey={Config.OMDB_API_KEY}"
         response = requests.get(url)
-        response.encoding = 'utf-8'
-        if response.status_code == 200:
-            data = response.json()
-            if data.get('Response') == 'True':
-                return data
-            else:
-                logging.warning(f"Movie not found in OMDB: {title}")
-                return None
-        else:
-            logging.error(f"API error for {title}: {response.status_code}")
-            return None
-    except requests.RequestException as e:
-        logging.error(f"Request error for {title}: {e}")
+        response.raise_for_status()
+        data = response.json()
+        if data.get('Response') == 'True':
+            logging.info(f"Successfully fetched data for {title}")
+            return data
+        logging.warning(f"No data found for {title}")
+        return None
+    except Exception as e:
+        logging.error(f"Error fetching OMDB data for {title}: {str(e)}")
         return None

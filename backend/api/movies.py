@@ -1,90 +1,80 @@
-# -*- coding: utf-8 -*-
+# api/movies.py
 from flask import Blueprint, jsonify, request
-import logging
-from models.movie import Movie, Genre, Movie_Genre
-from models.user import AppUser_Movie
+from flask_jwt_extended import jwt_required, get_jwt_identity
+from models.user_movie import AppUser_Movie
+from models.movie import Movie
+from models.user import AppUser
 from database import db
+import logging
 
 movies_bp = Blueprint('movies', __name__)
 
-logging.basicConfig(
-    filename='import.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    encoding='utf-8'
-)
-
-@movies_bp.route('/movies-and-series', methods=['GET'])
-def get_movies_and_series():
-    try:
-        user_id = request.args.get('user_id', 1, type=int)
-        user_movies = AppUser_Movie.query.filter_by(appuser_id=user_id).all()
-        movies = [db.session.get(Movie, um.movie_id).to_dict() for um in user_movies]
-        return jsonify(movies), 200
-    except Exception as e:
-        logging.error(f"Error fetching movies and series: {e}")
-        return jsonify({"error": str(e)}), 500
+logging.basicConfig(filename='backend/app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 @movies_bp.route('/movies', methods=['GET'])
+@jwt_required()
 def get_movies():
     try:
-        user_id = request.args.get('user_id', 1, type=int)
-        user_movies = (
-            AppUser_Movie.query
-            .join(Movie, AppUser_Movie.movie_id == Movie.movie_id)
-            .filter(AppUser_Movie.appuser_id == user_id, Movie.movie_type == 'movie')
-            .all()
-        )
-        movies = [db.session.get(Movie, um.movie_id).to_dict() for um in user_movies]
-        return jsonify(movies), 200
+        movies = Movie.query.all()
+        logger.debug(f"Retrieved {len(movies)} movies")
+        return jsonify([movie.to_dict() for movie in movies]), 200
     except Exception as e:
-        logging.error(f"Error fetching movies: {e}")
-        return jsonify({"error": str(e)}), 500
+        logger.error(f"Error in get_movies: {str(e)}")
+        return jsonify({'error': str(e)}), 500
 
-@movies_bp.route('/series', methods=['GET'])
-def get_series():
+@movies_bp.route('/watched', methods=['GET'])
+@jwt_required()
+def get_watched_movies():
     try:
-        user_id = request.args.get('user_id', 1, type=int)
-        user_movies = (
-            AppUser_Movie.query
-            .join(Movie, AppUser_Movie.movie_id == Movie.movie_id)
-            .filter(AppUser_Movie.appuser_id == user_id, Movie.movie_type == 'series')
-            .all()
-        )
-        series = [db.session.get(Movie, um.movie_id).to_dict() for um in user_movies]
-        return jsonify(series), 200
-    except Exception as e:
-        logging.error(f"Error fetching series: {e}")
-        return jsonify({"error": str(e)}), 500
+        current_user_id = get_jwt_identity()
+        print(f"User ID: {current_user_id}")
+        logger.debug(f"Fetching watched movies for user_id: {current_user_id}")
 
-@movies_bp.route('/moviesbygenre', methods=['GET'])
-def get_movies_by_genre():
-    try:
-        user_id = request.args.get('user_id', 1, type=int)
-        genre = request.args.get('genre', None)
-        query = (
-            AppUser_Movie.query
-            .select_from(AppUser_Movie)
-            .join(Movie, AppUser_Movie.movie_id == Movie.movie_id)
-        )
-        if genre:
-            query = (
-                query
-                .join(Movie_Genre, Movie.movie_id == Movie_Genre.movie_id)
-                .join(Genre, Movie_Genre.genre_id == Genre.genre_id)
-                .filter(Genre.genre_name.ilike(genre))
-            )
-        movies = [db.session.get(Movie, um.movie_id).to_dict() for um in query.all()]
-        return jsonify(movies), 200
+        watched_entries = AppUser_Movie.query.filter_by(appuser_id=current_user_id).all()
+        logger.debug(f"Found {len(watched_entries)} entries in AppUser_Movie: {[entry.movie_id for entry in watched_entries]}")
+
+        if not watched_entries:
+            return jsonify({"message": "Brak obejrzanych filmow.", "movies": []}), 200
+
+        movie_ids = [entry.movie_id for entry in watched_entries]
+        logger.debug(f"Movie IDs to fetch: {movie_ids}")
+
+        watched_movies = Movie.query.filter(Movie.movie_id.in_(movie_ids)).all()
+        logger.debug(f"Found {len(watched_movies)} watched movies: {[m.movie_id for m in watched_movies]}")
+
+        all_movies = Movie.query.all()
+        logger.debug(f"Total movies in database: {len(all_movies)}")
+
+        movies = [movie.to_dict() for movie in watched_movies]
+        return jsonify({"message": "Obejrzane filmy i seriale.", "movies": movies}), 200
     except Exception as e:
-        logging.error(f"Error fetching movies by genre: {e}")
-        return jsonify({"error": str(e)}), 500
-    
-@movies_bp.route('/movie/<int:movie_id>', methods=['GET'])
-def get_movie(movie_id):
+        logger.error(f"Error in get_watched_movies: {str(e)}")
+        return jsonify({'error': f"Blad serwera: {str(e)}"}), 500
+
+@movies_bp.route('/watched/add', methods=['POST'])
+@jwt_required()
+def add_watched_movie():
     try:
-        movie = Movie.query.get_or_404(movie_id)
-        return jsonify(movie.to_dict()), 200
+        user_id = get_jwt_identity()
+        data = request.get_json()
+        movie_id = data.get('movie_id')
+
+        if not movie_id:
+            return jsonify({'error': 'Missing movie_id'}), 400
+
+        user = AppUser.query.get(user_id)
+        movie = Movie.query.get(movie_id)
+
+        if not user or not movie:
+            return jsonify({'error': 'User or movie not found'}), 404
+
+        if movie not in user.watched:
+            user.watched.append(movie)
+            db.session.commit()
+            return jsonify({'message': 'Movie added to watched list', 'movie': movie.to_dict()}), 200
+        return jsonify({'message': 'Movie already in watched list'}), 200
     except Exception as e:
-        logging.error(f"Error fetching movie with ID {movie_id}: {e}")
-        return jsonify({"error": str(e)}), 500
+        db.session.rollback()
+        logger.error(f"Error in add_watched_movie: {str(e)}")
+        return jsonify({'error': str(e)}), 500

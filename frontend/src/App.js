@@ -1,65 +1,118 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Watched from './watched';
-import Header from './header';
-import Footer from './footer';
-import Home from './home';
-import Register from './register';
-import Login from './login';
-import Movies from './movies';
-import Series from './series';
-import MovieDetails from './moviedetails';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
+import Movies from './Movies';
+import Series from './Series';
+import Watched from './Watched';
+import MovieDetails from './MovieDetails';
+import Home from './Home';
+import Header from './Header';
+import Footer from './Footer';
 import './App.css';
 
-function AppWrapper() {
-    const location = useLocation();
+function App() {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [movies, setMovies] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
+    const apiUrl = 'http://localhost:5000';
 
     useEffect(() => {
-        fetch('https://backend-g7rx.onrender.com/movies?user_id=1')
-            .then((res) => res.json())
-            .then((data) => setMovies(data));
-    }, []);
+        const token = localStorage.getItem('access_token'); // Zmieniono z 'token' na 'access_token'
+        if (token) {
+            setIsAuthenticated(true);
+            const fetchMovies = async () => {
+                try {
+                    const response = await fetch(`${apiUrl}/movies`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Authorization: `Bearer ${token}`,
+                        },
+                    });
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    setMovies(data);
+                } catch (err) {
+                    console.error('B³¹d pobierania filmów:', err);
+                    setMovies([]);
+                }
+            };
+            fetchMovies();
+        }
+    }, [apiUrl]);
 
     const filteredMovies = movies.filter((movie) =>
-        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+        movie.title?.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    const hideHeaderFooter = location.pathname === '/register' || location.pathname === '/login' ;
-
     return (
-        <>
-            {!hideHeaderFooter && (
-                    <Header
-                        searchQuery={searchQuery}
-                        setSearchQuery={setSearchQuery}
+        <div className="App">
+            <Router>
+                {isAuthenticated && <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />}
+                <Routes>
+                    <Route path="/" element={<Navigate to="/home" />} />
+                    <Route
+                        path="/login"
+                        element={<Login setIsAuthenticated={setIsAuthenticated} apiUrl={apiUrl} />}
                     />
-            )}
-            
-            <Routes>
-                <Route path="/" element={<Home filteredMovies={filteredMovies} />} />
-                <Route path="/watched" element={<Watched filteredMovies={filteredMovies} />} />
-                <Route path="/movies" element={<Movies filteredMovies={filteredMovies} />} />
-                <Route path="/series" element={<Series filteredMovies={filteredMovies} />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/movie/:id" element={<MovieDetails />} />
-            </Routes>
-
-            {!hideHeaderFooter && <Footer />}
-        </>
+                    <Route
+                        path="/register"
+                        element={<Register setIsAuthenticated={setIsAuthenticated} apiUrl={apiUrl} />}
+                    />
+                    <Route
+                        path="/home"
+                        element={
+                            isAuthenticated ? (
+                                <Home filteredMovies={filteredMovies} apiUrl={apiUrl} />
+                            ) : (
+                                <Navigate to="/login" />
+                            )
+                        }
+                    />
+                    <Route
+                        path="/movies"
+                        element={
+                            isAuthenticated ? (
+                                <Movies filteredMovies={filteredMovies} apiUrl={apiUrl} />
+                            ) : (
+                                <Navigate to="/login" />
+                            )
+                        }
+                    />
+                    <Route
+                        path="/series"
+                        element={
+                            isAuthenticated ? (
+                                <Series filteredMovies={filteredMovies} apiUrl={apiUrl} />
+                            ) : (
+                                <Navigate to="/login" />
+                            )
+                        }
+                    />
+                    <Route
+                        path="/watched"
+                        element={
+                            isAuthenticated ? (
+                                <Watched filteredMovies={filteredMovies} apiUrl={apiUrl} />
+                            ) : (
+                                <Navigate to="/login" />
+                            )
+                        }
+                    />
+                    <Route
+                        path="/movie/:id"
+                        element={
+                            isAuthenticated ? <MovieDetails apiUrl={apiUrl} /> : <Navigate to="/login" />
+                        }
+                    />
+                </Routes>
+                <Footer />
+            </Router>
+        </div>
     );
-}
-
-function App(){
-    return (
-        <Router>
-            <AppWrapper />
-        </Router>
-    )
 }
 
 export default App;

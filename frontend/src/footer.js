@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-column">
-                    <h4 className="contactText"><Mail size={16} />&nbsp;Kontakt</h4>
+                    <h4 className="contactText"><Mail size={16} /> Kontakt</h4>
                     <ul>
                         <li><a href="mailto:kontakt@blackeagletv.com" className="mail">kontakt@blackeagletv.com</a></li>
                     </ul>

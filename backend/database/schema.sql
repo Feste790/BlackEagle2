@@ -1,9 +1,3 @@
-/*==============================================================*/
-/* DBMS name:      PostgreSQL 9.x                               */
-/* Created on:     25.04.2025                                   */
-/* Description:    Improved movie database schema with safe names */
-/*==============================================================*/
-
 /* Drop existing objects if they exist */
 DROP TABLE IF EXISTS AppUser_Movie;
 DROP TABLE IF EXISTS Movie_People;

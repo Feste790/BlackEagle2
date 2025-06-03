@@ -11,3 +11,4 @@ chardet==5.2.0
 bcrypt==4.1.2
 PyJWT==2.8.0
 flask-migrate==4.0.5
+
