@@ -13,3 +13,4 @@ PyJWT==2.8.0
 flask-migrate==4.0.5
 flask-jwt-extended==4.6.0
 werkzeug==2.3.7
+

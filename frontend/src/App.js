@@ -15,7 +15,7 @@ function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [movies, setMovies] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
-    const apiUrl = 'http://localhost:5000';
+    const apiUrl = 'https://backend-g7rx.onrender.com/';
 
     useEffect(() => {
         const token = localStorage.getItem('access_token'); // Zmieniono z 'token' na 'access_token'
@@ -36,7 +36,7 @@ function App() {
                     const data = await response.json();
                     setMovies(data);
                 } catch (err) {
-                    console.error('B³¹d pobierania filmów:', err);
+                    console.error('BÂ³Â¹d pobierania filmÃ³w:', err);
                     setMovies([]);
                 }
             };
