@@ -6,4 +6,4 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY', 'your-jwt-secret-key')
     JWT_ACCESS_TOKEN_EXPIRES = 3600  # 1 hour
-    CORS_ORIGINS = ["http://localhost:3000"]  # Add your frontend URL
+    CORS_ORIGINS = ["https://frontend-git-main-feste790s-projects.vercel.app"]  # Add your frontend URL
