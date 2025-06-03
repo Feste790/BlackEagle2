@@ -9,7 +9,7 @@ import logging
 
 movies_bp = Blueprint('movies', __name__)
 
-logging.basicConfig(filename='backend/app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 @movies_bp.route('/movies', methods=['GET'])
