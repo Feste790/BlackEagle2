@@ -15,7 +15,7 @@ function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [movies, setMovies] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
-    const apiUrl = 'https://backend-g7rx.onrender.com/';
+    const apiUrl = 'https://backend-g7rx.onrender.com';
 
     useEffect(() => {
         const token = localStorage.getItem('access_token'); // Zmieniono z 'token' na 'access_token'
